@@ -63,7 +63,7 @@ VALUES
 ('Jane', 'Doe', 'jane.doe@example.com', '987-654-3210', '456 Oak St'),
 ('Alice', 'Johnson', 'alice.johnson@example.com', '555-678-1234', '789 Pine St'),
 ('Bob', 'Smith', 'bob.smith@example.com', '555-123-4567', '789 Maple St'),
-('Charlie', 'Brown', 'charlie.brown@example.com', '555-987-6543', '321 Chestnut St');
+('Charlie', 'Brown', 'charlie.brown@example.com', '555-987-6543', '321 Chestnut St'),
 ('David', 'Jones', 'david.jones@example.com', '555-321-9876', '654 Willow St'),
 ('Eve', 'Taylor', 'eve.taylor@example.com', '555-654-3219', '987 Birch St'),
 ('Frank', 'Miller', 'frank.miller@example.com', '555-321-6540', '321 Ash St'),
@@ -85,35 +85,35 @@ VALUES
 
 -- Вставка данных в таблицу product_categories
 
-INSERT INTO product_categories (category_id, category_name)
+INSERT INTO product_categories (category_name)
 VALUES
-(1, 'tables'),
-(2, 'chairs'),
-(3, 'cupboards'),
-(4, 'beds'),
-(5, 'sofas');
+('tables'),
+('chairs'),
+('cupboards'),
+('beds'),
+('sofas');
 
 
 -- Вставка данных в таблицу products
 
-INSERT INTO products (product_id, product_name, description, price, stock, category_id)
+INSERT INTO products (product_name, description, price, stock, category_id)
 VALUES
-(1, 'QWERTY', 'nice QWERTY', 10, 12, 5),
-(2, 'ASDFGH', 'nice ASDFGH', 20, 10, 4),
-(3, 'ZXCVBN', 'nice ZXCVBN', 30, 8, 3),
-(4, 'MNBVCX', 'nice MNBVCX', 40, 2, 2),
-(5, 'LKJHGF', 'nice LKJHGF', 50, 3, 1);
+('QWERTY', 'nice QWERTY', 10, 12, 5),
+('ASDFGH', 'nice ASDFGH', 20, 10, 4),
+('ZXCVBN', 'nice ZXCVBN', 30, 8, 3),
+('MNBVCX', 'nice MNBVCX', 40, 2, 2),
+('LKJHGF', 'nice LKJHGF', 50, 3, 1);
 
 
--- Вставка данных в таблицу order_order_details
+-- Вставка данных в таблицу order_details
 
-INSERT INTO order_details (order_id, product_id, quantity, unit_price)
+INSERT INTO order_details (product_id, quantity, unit_price)
 VALUES
-(1, 1, 1, 10),
-(2, 2, 2, 20),
-(3, 4, 2, 40),
-(4, 5, 1, 50),
-(5, 2, 4, 20);
+(1, 1, 10),
+(2, 2, 20),
+(4, 2, 40),
+(5, 1, 50),
+(2, 4, 20);
 
 
 -- Проверка вставки данных в таблицу customers
